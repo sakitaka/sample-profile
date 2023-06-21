@@ -1,9 +1,14 @@
+html, body {
+    font-family: "Avenir Next";
+    margin: 0;
+  }
+
 header{
     background-color: #efab0c;
     color: #fff;
     height: 90px;
 }
-a{
+header a{
     color: #fff;
 }
 .header-logo{
@@ -19,3 +24,41 @@ a{
     padding: 33px 20px;
     font-size: 1.4rem;
 }
+
+h2 {
+    color: #333;
+  }
+  
+  h2, p {
+    text-align: center;
+  }
+  .profile{
+    margin: 16px 24px;
+  }
+
+  main ul{
+    margin: auto;
+    width: fit-content;
+  }
+img{
+    width: 250px; /*イメージの中央寄せはmarginauto?*/
+    height: 250px; 
+    margin: auto;
+    display: block;
+}
+
+
+.skills{
+    background-color: #f1cb71;
+    padding: 16px 24px;
+}
+
+.portfolio{
+    padding: 16px 24px;
+}
+
+footer{
+    background-color: #c38c0b;
+    color: #fff;
+}
+
