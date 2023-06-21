@@ -1,12 +1,22 @@
+ html, body, ul, ol, li {
+  margin: 0;
+  padding: 0;
+} 
+
+
+
 html, body {
     font-family: "Avenir Next";
     margin: 0;
+    padding: 0;
   }
 
 header{
     background-color: #efab0c;
     color: #fff;
     height: 90px;
+    padding: 0;
+    margin: 0;
 }
 header a{
     color: #fff;
