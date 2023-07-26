@@ -21,42 +21,92 @@ header{
 header a{
     color: #fff;
 }
+
+.navbar {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
 .header-logo{
     float: left;
     font-size: 36px;
     padding: 20px 20px;
     font-family: 'Train One', cursive;
+}@media (max-width: 1000px){
+  .header-logo{
+    color: #000;
+  }
 }
 
-.header-list li{
-    list-style: none;
-    float: left;
-    padding: 33px 20px;
-    font-size: 1.4rem;
+.logo {
+  font-size: 36px;
+  padding: 10px 10px;
+  font-family: 'Train One', cursive;
 }
+
+#menu-toggle {
+  display: none;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu li {
+  padding: 10px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-btn {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  display: block;
+  height: 2px;
+  width: 30px;
+  background-color: #fff;
+  margin-bottom: 6px;
+  transition: all 0.2s ease;
+}
+
 
 h2 {
     color: #333;
+  }@media (max-width: 1000px){
+    h2 {
+      font-size: larger;
+    }
   }
   
-  h2, p {
+h2, p {
     text-align: center;
-  }
-  .profile{
+}
+.profile{
     margin: 16px 24px;
-  }
+}
 
-  main ul{
+main ul{
     margin: auto;
     width: fit-content;
-  }
+}
 img{
     width: 250px; /*イメージの中央寄せはmarginauto?*/
     height: 250px; 
     margin: auto;
     display: block;
 }
-
 
 .skills{
     background-color: #f1cb71;
@@ -72,3 +122,50 @@ footer{
     color: #fff;
 }
 
+
+
+@media (max-width:800px) {
+  /* 500px未満 */
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 93px;
+    left: 0;
+    right: 0;
+    background-color: #efab0c;
+  }
+
+  .menu li {
+    padding: 10px 20px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .menu-btn span:nth-child(2) {
+    width: 20px;
+  }
+
+  .menu-btn span:nth-child(3) {
+    width: 25px;
+  }
+
+  #menu-toggle:checked + .menu-btn span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  #menu-toggle:checked + .menu-btn span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked + .menu-btn span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  #menu-toggle:checked ~ .menu {
+    display: flex;
+  }
+}
